@@ -23,7 +23,7 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Yukki" ]]
+    if [[ $UPSTREAM_REPO == "Sanki" ]]
     then
         rlink= echo "https://github.com/shubham-king/sanki_spambot"
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -66,7 +66,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="catuserbot.zip"
+    zippath="sanki_spambot.zip"
     echo "  Downloading source code ..."
     wget -q $(_get_ziplink) -O "$zippath"
     echo "  Unpacking Data ..."
